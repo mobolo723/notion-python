@@ -1,8 +1,17 @@
+"""This file contains all string enums types listed in the API."""
+
 from __future__ import annotations
 
 from enum import Enum
 
-__all__ = ('BlockType', 'PageType', 'Color')
+__all__ = (
+    'BlockType',
+    'PageType',
+    'Color',
+    'RichTextType',
+    'MentionType'
+)
+
 
 class BlockType(str, Enum):
     BOOKMARK = "bookmark"
@@ -37,6 +46,7 @@ class BlockType(str, Enum):
     UNSUPPORTED = "unsupported"
     VIDEO = "video"
 
+
 class PageType(str, Enum):
     CHECKBOX = "checkbox"
     CREATED_BY = "created_by"
@@ -61,6 +71,7 @@ class PageType(str, Enum):
     UNIQUE_ID = "unique_id"
     VERIFICATION = "verification"
 
+
 class Color(str, Enum):
     BLUE = "blue"
     BLUE_BACKGROUND = "blue_background"
@@ -81,3 +92,18 @@ class Color(str, Enum):
     PURPLE_BACKGROUND = "purple_background"
     RED = "red"
     RED_BACKGROUND = "red_background"
+
+
+class RichTextType(str, Enum):
+    TEXT = "text"
+    MENTION = "mention"
+    EQUATION = "equation"
+
+
+class MentionType(str, Enum):
+    DATABASE = "database"
+    DATE = "date"
+    LINK_PREVIEW = "link_preview"
+    PAGE = "page"
+    TEMPLATE_MENTION = "template_mention"
+    USER = "user"
