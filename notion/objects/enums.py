@@ -9,7 +9,9 @@ __all__ = (
     'PageType',
     'Color',
     'RichTextType',
-    'MentionType'
+    'MentionType',
+    'FileType',
+    'ImageType'
 )
 
 
@@ -107,3 +109,20 @@ class MentionType(str, Enum):
     PAGE = "page"
     TEMPLATE_MENTION = "template_mention"
     USER = "user"
+
+
+class FileType(str, Enum):
+    EXTERNAL = 'external'
+    FILE = 'file'
+
+
+class ImageType(str, Enum):
+    BMP = '.bmp'
+    GIF = '.gif'
+    HEIC = '.heic'
+    JPEG = '.jpeg'
+    JPG = '.jpg'
+    PNG = '.png'
+    SVG = '.svg'
+    TIF = '.tif'
+    TIFF = '.tiff'
