@@ -1,9 +1,20 @@
 from __future__ import annotations
 
-from typing import TypedDict, Optional, Union, Dict
+from typing import TypedDict, Optional, Union, Dict, TYPE_CHECKING
 from .enums import *
 
-__all__ = ('RichTextObject', 'Equation', 'Mention', 'Text', 'Annotation', 'RichTextObjects')
+__all__ = (
+    'RichTextObject',
+    'Equation',
+    'Mention',
+    'Text',
+    'Annotation',
+    'RichTextObjects'
+)
+
+if TYPE_CHECKING:
+
+
 
 
 class RichTextObject(TypedDict):
